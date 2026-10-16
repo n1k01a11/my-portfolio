@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My personal portfolio showcasing my skills, background, and TindaThrift web development project.">
+    <title>My Portfolio | IT Student</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="logo">My<span>Portfolio.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Home -->
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">WELCOME TO MY PORTFOLIO</p>
+
+                <h1>Hello, I'm <span class="accent">Nicole</span></h1>
+
+                <h2 class="typing-heading">
+    <span id="typing-text"></span><span class="typing-cursor">|</span>
+</h2>
+
+                <p class="hero-description">
+                    I am a Bachelor of Science in Information Technology student at Cebu Eastern College. I enjoy learning about web development, exploring new technologies, and building practical applications through hands-on projects
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="button primary-button">
+                        View My Project
+                    </a>
+                    <a href="#about" class="button secondary-button">
+                        About Me
+                    </a>
+                </div>
+
+                <p class="location">📍 Cebu City, Philippines</p>
+            </div>
+
+            <div class="hero-visual">
+                <div class="portrait-frame">
+                    
+<img
+    src="images/profile.png"
+    alt="Portrait of Nicole, an Information Technology student"
+    class="profile-photo"
+>
+
+                </div>
+                <div class="floating-label">
+                    <span class="status-dot"></span>
+                    Aspiring Web Developer
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section container" id="about">
+            <p class="eyebrow">GET TO KNOW ME</p>
+            <h2 class="section-title">About <span class="accent">Me</span></h2>
+
+            <div class="about-card">
+                <p>
+                    I am an Information Technology student at Cebu Eastern
+                    College. I am developing my knowledge of programming,
+                    web technologies, and database management through
+                    academic projects and hands-on learning.
+                </p>
+                <p>
+                    I enjoy learning new technical skills, solving problems,
+                    and improving my ability to build functional and
+                    user-friendly applications.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <p class="eyebrow">WHAT I'M LEARNING</p>
+                <h2 class="section-title">My <span class="accent">Skills</span></h2>
+                <p class="section-intro">
+                    Technologies and skills I have used or am developing
+                    through my studies and project work.
+                </p>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-icon">⌨</span>
+                        <h3>Python & Django</h3>
+                        <p>Web application development</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">〈〉</span>
+                        <h3>HTML & CSS</h3>
+                        <p>Website structure and styling</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">JS</span>
+                        <h3>JavaScript</h3>
+                        <p>Interactive web features</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">▤</span>
+                        <h3>SQLite</h3>
+                        <p>Database fundamentals</p>
+                    </article>
+                    <article class="skill-card">
+    <span class="skill-icon">📱</span>
+    <h3>Flutter & Dart</h3>
+    <p>Basic experience in mobile application development through a group project.</p>
+</article>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section container" id="projects">
+            <p class="eyebrow">MY PROJECT WORK</p>
+            <h2 class="section-title">Featured <span class="accent">Project</span></h2>
+            <p class="section-intro">
+                A web application project focused on improving the online
+                buying and selling experience for second-hand clothing.
+            </p>
+
+            <article class="project-card">
+                <div class="project-preview">
+                    <div class="project-preview-content">
+                        <img
+    src="images/tindathrift-homepage.jpg"
+    alt="TindaThrift online thrift marketplace homepage"
+    class="project-screenshot"
+>
+                        <p>TindaThrift</p>
+                        <span>ONLINE UKAY-UKAY MARKETPLACE</span>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <span class="project-type">FULL-STACK WEB APPLICATION</span>
+                    <h3>TindaThrift</h3>
+
+                    <p>
+                        TindaThrift is a Django-based online marketplace
+                        for second-hand clothing. It provides features for
+                        browsing products, managing carts and wishlists,
+                        processing orders, and negotiating prices through
+                        an online tawad system.
+                    </p>
+
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>SQLite</span>
+                        <span>HTML & CSS</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <p class="contribution">
+                        <strong>My Role:</strong> Full-stack development
+                        for a group project.
+                    </p>
+
+                </div>
+            </article>
+        </section>
+
+        <!-- Quiz Results -->
+        <section class="section section-alt" id="quiz-results">
+            <div class="container">
+                <p class="eyebrow">ACADEMIC PERFORMANCE</p>
+                <h2 class="section-title">Quiz <span class="accent">Results</span></h2>
+                <p class="section-intro">
+                    My scores for Quiz 1 and Quiz 2 will be added here.
+                </p>
+
+                <div class="quiz-grid">
+                    <article class="quiz-card">
+                        <span>QUIZ 01</span>
+                        <h3>Quiz 1</h3>
+                        <p>Score: To be updated</p>
+                    </article>
+
+                    <article class="quiz-card">
+                        <span>QUIZ 02</span>
+                        <h3>Quiz 2</h3>
+                        <p>Score: To be updated</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section container" id="contact">
+            <p class="eyebrow">LET'S CONNECT</p>
+            <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+            <div class="contact-card">
+                <p>
+                    Thank you for visiting my portfolio. You can contact
+                    me through my email or visit my GitHub profile.
+                </p>
+                <a class="button primary-button"
+                   href="mailto:kolanndigs@gmail.com">
+                    Email Me
+                </a>
+                <a class="text-link" href="https://github.com/n1k01a11"
+                   target="_blank" rel="noopener noreferrer">
+                    GitHub Profile ↗
+                </a>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Nicole Dignos. Personal Portfolio.</p>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+</body>
+</html>
