@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -200,29 +200,66 @@
         </section>
 
         <!-- Quiz Results -->
-        <section class="section section-alt" id="quiz-results">
-            <div class="container">
-                <p class="eyebrow">ACADEMIC PERFORMANCE</p>
-                <h2 class="section-title">Quiz <span class="accent">Results</span></h2>
-                <p class="section-intro">
-                    My scores for Quiz 1 and Quiz 2 will be added here.
-                </p>
+        
+<section class="quiz-results container" id="quiz-results">
+  <div class="section-heading">
+    <p class="eyebrow">MY ACHIEVEMENTS</p>
+    <h2>Quiz Results<span class="accent">.</span></h2>
+    <p>My academic progress and assessment results.</p>
+  </div>
 
-                <div class="quiz-grid">
-                    <article class="quiz-card">
-                        <span>QUIZ 01</span>
-                        <h3>Quiz 1</h3>
-                        <p>Score: To be updated</p>
-                    </article>
+  <div class="quiz-grid">
+    <article class="quiz-card">
+      <div class="quiz-card-top">
+        <span class="quiz-icon">01</span>
+        <span class="quiz-status">Completed</span>
+      </div>
 
-                    <article class="quiz-card">
-                        <span>QUIZ 02</span>
-                        <h3>Quiz 2</h3>
-                        <p>Score: To be updated</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <h3>Quiz 1</h3>
+      <p class="quiz-description">First assessment</p>
+
+      <div class="quiz-score">
+        <span class="score-number" data-target="20">0</span>
+        <span class="score-total">20 / 20</span>
+      </div>
+
+      <div class="score-track">
+        <div class="score-fill" data-width="100"></div>
+      </div>
+
+      <div class="score-footer">
+        <span>Score</span>
+        <span class="score-percent" data-target="100">0%</span>
+      </div>
+    </article>
+
+    <article class="quiz-card">
+      <div class="quiz-card-top">
+        <span class="quiz-icon">02</span>
+        <span class="quiz-status">Completed</span>
+      </div>
+
+      <h3>Quiz 2</h3>
+      <p class="quiz-description">Second assessment</p>
+
+      <div class="quiz-score">
+        <span class="score-number" data-target="26">0</span>
+        <span class="score-total">26 / 30</span>
+      </div>
+
+      <div class="score-track">
+        <div class="score-fill" data-width="86.67"></div>
+      </div>
+
+      <div class="score-footer">
+        <span>Score</span>
+        <span class="score-percent" data-target="86.67">0%</span>
+      </div>
+    </article>
+  </div>
+
+  
+
 
         <!-- Contact -->
         <section class="section container" id="contact">

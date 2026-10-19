@@ -140,3 +140,117 @@ if (typingText) {
         typeRole();
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector("#quiz-results");
+
+  if (!section) return;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  let hasAnimated = false;
+
+  function animateScores() {
+    if (hasAnimated) return;
+    hasAnimated = true;
+
+    section.querySelectorAll(".score-number").forEach((element) => {
+      const target = Number(element.dataset.target);
+
+      if (reducedMotion) {
+        element.textContent = target;
+        return;
+      }
+
+      const duration = 1400;
+      const start = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+
+        element.textContent = Math.round(target * eased);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+
+    section.querySelectorAll(".score-percent").forEach((element) => {
+      const target = Number(element.dataset.target);
+
+      if (reducedMotion) {
+        element.textContent = target + "%";
+        return;
+      }
+
+      const duration = 1400;
+      const start = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        element.textContent = (target * eased).toFixed(1) + "%";
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = target + "%";
+        }
+      }
+
+      requestAnimationFrame(update);
+    });
+
+    section.querySelectorAll(".score-fill").forEach((bar) => {
+      bar.style.width = bar.dataset.width + "%";
+    });
+
+    const combinedScore = section.querySelector(".combined-score");
+    const combinedPercent = section.querySelector(".combined-percent");
+    const summaryFill = section.querySelector(".summary-fill");
+
+    if (reducedMotion) {
+      combinedScore.textContent = "46";
+      combinedPercent.textContent = "92%";
+      summaryFill.style.width = "92%";
+      return;
+    }
+
+    const duration = 1400;
+    const start = performance.now();
+
+    function updateSummary(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+
+      combinedScore.textContent = Math.round(46 * eased);
+      combinedPercent.textContent = Math.round(92 * eased) + "%";
+      summaryFill.style.width = (92 * eased) + "%";
+
+      if (progress < 1) {
+        requestAnimationFrame(updateSummary);
+      }
+    }
+
+    requestAnimationFrame(updateSummary);
+  }
+
+  if ("IntersectionObserver" in window && !reducedMotion) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        animateScores();
+        observer.disconnect();
+      }
+    }, { threshold: 0.25 });
+
+    observer.observe(section);
+  } else {
+    animateScores();
+  }
+});
